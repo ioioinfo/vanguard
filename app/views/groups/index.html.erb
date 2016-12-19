@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style>
+			body {
+				font-family: "微软雅黑"!important;
+				background-color: rgba(204, 204, 255, 0.3)!important;
+			}
+			
+			.form-control {
+				border-radius: 4px 0 0 4px!important;
+			}
+			
+			.navbar .btn {
+				border-radius: 0 4px 4px 0!important;
+				margin-left: -6px;
+			}
+			
+			.well {
+				width: 71%;
+				margin: 0 auto;
+				background-color: white!important;
+			}
+			
+			.navbar {
+				padding-left: 14.5%;
+			}
+			
+			.dropdown-toggle img {
+				width: 30px;
+				margin-top: -3px;
+			}
+			
+			.button-3d.button-action {
+				margin-bottom: 20px;
+			}
+			
+			i {
+				font-size: 38px;
+			}
+			
+			.col-md-2 span:nth-child(even) {
+				color: black;
+			}
+			
+			.col-md-2 span:nth-child(odd) {
+				color: gray;
+			}
+			
+			.add-member {
+				width: 10px;
+				height: 10px;
+				border: 1px solid red;
+				border-radius: 5px;
+				padding: 4px;
+			}
+			
+			.top {
+				border-left: 1px solid white;
+				border-right: 1px solid white;
+				border-top: 1px solid rgb(248, 248, 248);
+			}
+			
+			#content .top:last-child {
+				border-bottom: 1px solid rgb(248, 248, 248);
+			}
+			
+			.add-btn-style {
+				font-size: 22px;
+				box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+			}
+			
+			.top>p {
+				padding: 10px;
+			}
+			
+			#content>span {
+				font-size: 18px;
+				color: rgb(102, 204, 51);
+			}
+			
+			.row .col-md-2:first-child {
+				margin-left: 10px;
+			}
+			
+			.row .col-md-2 span:last-child {
+				position: relative;
+				left: 80px;
+				bottom: 30px;
+				white-space: nowrap;
+			}
+			
+			input[name='team'] {
+				border-top: none;
+				border-left: none;
+				border-right: none;
+				border-bottom: 1px dashed black;
+				outline: none;
+				display: none;
+			}
+			
+			.modal-dialog.width-alter {
+				width: 300px!important;
+			}
+			
+			.modal-body {
+				padding: 0!important;
+			}
+			
+			.table>tbody>tr>td>img {
+				width: 40px;
+			}
+			
+			.table>tbody>tr>td {
+				vertical-align: middle!important;
+			}
+			
+			.table {
+				margin-bottom: 0!important;
+			}
+		</style>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/buttons.css" />
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+     				 </button>
+					<a class="navbar-brand" href="#">
+						<span>
+  						<img src="/uploads/logocaise.png" style="width: 80px;"/> 
+      				</span>
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="/user/index">首页</a>
+						</li>
+						<li>
+							<a href="#">ITEM B</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">项目管理 <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">项目</a>
+								</li>
+								<li>
+									<a href="/user/index">团队</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="搜索">
+						</div>
+						<button type="submit" class="btn btn-default">
+							<span class="glyphicon glyphicon-search"></span></button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown" style="margin-right: 180px;margin-bottom: -10px;">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/uploads/avtar.png" /><span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#" id="personal">个人信息设置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<div class="well well-lg" id="content">
+			<button class="button button-3d button-action button-circle button-ju mbo button-normal" id="addteam" data-toggle="modal" data-target="#myModal"><i class="fa fa-thumbs-up">+</i></button>
+			<span>添加团队</span>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">团队信息</h4>
+						</div>
+						<div class="modal-body">
+							<input type="text" name="team" id="team" placeholder="请填写团队名称" value="" />
+							<span class="glyphicon glyphicon-pencil"></span>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary" id="submit">提交更改</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+			</div>
+
+			<!--Lists of the staff-->
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog width-alter">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">人员表</h4>
+						</div>
+						<!--
+                        	the modal loops the user(id&usericon&nickname) via -> user_id = session[:user_id]
+                        -->
+						<div class="modal-body">
+							<% @users.each do |user| %>
+							<table class="table table-hover">
+								<tr>
+									<td>
+										<div class="checkbox">
+											<label><input type="checkbox" value="<%= user.id %>" name="staff"></label>
+										</div>
+									</td>
+									<td><img src="/uploads/<%= user.usericon %>" class="img-rounded" /></td>
+									<td>
+										<%= user.nickname %>
+									</td>
+								</tr>
+							</table>
+							<% end %>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary" id="submitnewstaff">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
+                    	user lists,contains:usericon,nickname,identification
+                    -->
+			<div class="content">
+				<% @groups.each do |data| %>
+				<div class="top">
+					<p>
+						<!-- loop the groups by groupname   -->
+						<%= data.groupname %>:
+						<button data-id="<%= data.id %>" class="button button-box button-tiny add-btn-style">+</button>
+						<button data-id="<%= data.id %>" class="deletegroup">删除</button>
+					</p>
+
+					<div class="row" id="row_<%= data.id %>">
+						<% data.users.each do |user| %>
+						<div class="col-md-2">
+							<img src="/uploads/<%= user.usericon %>" class="img-circle">
+							<span><%= user.nickname %></span>
+							<span>管理员</span>
+						</div>
+						<% end %>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+		</div>
+		<script>
+			var dataid;
+			$(".glyphicon.glyphicon-pencil").click(function() {
+				$("input[name='team']").fadeIn(3000);
+			});
+			$(".btn.btn-default").click(function() {
+				$("input[name='team']").val("").css('display', '');
+			});
+			$(".close").click(function() {
+				$("input[name='team']").val("").css('display', '');
+			});
+
+			$(".button.button-box").click(function() {
+				dataid = $(this).data("id");
+				$("#myModal2").modal();
+			});
+
+			$("#submit").click(function() {
+				$.get(
+					"/groups/add", {
+						groupname: $("input[name='team']").val()
+					},
+					//new new team
+					function(data) {
+						$(".content").append('<div class="top"><p>' + data.groupname + ':<button data-id="'+data.id+'" class="button button-box button-tiny add-btn-style">+</button>\n<button data-id="'+data.id+'" class="deletegroup">删除</button></p><div class="row" id="row_' + data.id + '"></div>');
+						deletegroupevent();
+					}
+				);
+			});
+
+			$("#submitnewstaff").click(function() {
+				var arr = [];
+				$("input[type='checkbox']:checked").each(function() {
+					arr.push(this.value);
+				})
+				var json = JSON.stringify(arr); //数组转换成json，都在了，数组和json
+				$.ajax({
+					type: "get",
+					dataType: "json",
+					url: "/groups/addnewstaff?json=" + json + "&dataid=" + dataid,
+					async: true,
+					success: function(data) {
+						for(i = 0; i < data.users.length; i++) {
+							var user = data.users[i];
+							$("#row_" + data.group_id).append('<div class="col-md-2">\n<img src="/uploads/' + user.usericon + '" class="img-circle">\n<span>' + user.nickname + '</span>\n<span>管理员</span>\n</div>');
+						}
+					}
+				});
+			});
+			
+			var deletegroupevent = function() {
+				$(".deletegroup").click(function() {
+				//	var elem = this;
+				//	var groupid = $(elem).data("id");
+				    $(this) = .bind(this);
+				    var groupid = $(this).data("id");
+					$.ajax({
+						type: "get",
+						url: "/groups/deletegroup?groupid=" + groupid,
+						async: true,
+						success: function(data) {
+						//	$(elem).parents(".top").remove();
+							$(this).parents(".top").remove();
+						}
+					})
+				});
+			};
+			deletegroupevent();
+			
+		</script>
+	</body>
+
+</html>

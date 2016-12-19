@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style>
+			body {
+				font-family: "微软雅黑"!important;
+				background-color: rgba(204, 204, 255, 0.3)!important;
+			}
+			
+			.form-control {
+				border-radius: 4px 0 0 4px!important;
+			}
+			
+			.navbar .btn {
+				
+				
+				border-radius: 0 4px 4px 0!important;
+				margin-left: -6px;
+			}
+			
+			.well {
+				width: 71%;
+				margin: 0 auto;
+				background-color: white!important;
+			}
+			
+			.navbar {
+				padding-left: 14.5%;
+			}
+			
+			.dropdown-toggle img {
+				width: 30px;
+				margin-top: -3px;
+			}
+		</style>
+		<link rel="stylesheet" href="/bootstrap.min.css">
+		<script src="/jquery.min.js"></script>
+		<script src="/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/buttons.css" />
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+     				 </button>
+					<a class="navbar-brand" href="#">
+						<span>
+  						<img src="/images/logocaise.png" style="width: 80px;"/> 
+      				</span>
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="/user/index">首页</a>
+						</li>
+						<li>
+							<a href="#">ITEM B</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">项目管理 <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">项目</a>
+								</li>
+								<li>
+									<a href="/groups/index">团队</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="搜索">
+						</div>
+						<button type="submit" class="btn btn-default">
+							<span class="glyphicon glyphicon-search"></span></button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown" style="margin-right: 180px;margin-bottom: -10px;">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/images/avtar.png" /><span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#" id="personal">个人信息设置</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+
+	
+       
+		<!--
+        	作者：offline
+        	时间：2016-12-14
+        	描述：
+        	enctype="multipart/form-data" 传文件一定要有的方法
+        -->
+		<form role="form" action="/user/save" method="post" enctype="multipart/form-data">
+			<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+			<div class="form-group">
+				<label for="nickname">昵称</label>
+				<input type="text" class="form-control" id="nickname" name="nickname" placeholder="请输入昵称">
+			</div>
+			
+			<div class="form-group">
+				<label for="exampleInputFile">上传头像</label>
+				<input type="file" id="exampleInputFile" name="usericon">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox"> Check me out</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	
+	</body>
+
+</html>

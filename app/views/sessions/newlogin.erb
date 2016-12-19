@@ -1,0 +1,105 @@
+<!DOCTYPE >
+<html>
+
+	<head>
+		<title>Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				font-family: "微软雅黑"!important;
+				background-color: rgb(245, 245, 245)!important;
+			}
+			
+			.nav {
+				font-size: 16px;
+				background-color: white;
+				width: 80%;
+				margin: 0 auto;
+				margin-top: 20px;
+				border-radius: 10px;
+			}
+			
+			.nav li a {
+				color: #445660;
+			}
+			
+			.nav li:not(:first-child) {
+				padding-top: 6px;
+			}
+			
+			.nav li img {
+				width: 100px;
+			}
+			
+			a:hover {
+				background-color: white!important;
+				color: #00CC33!important;
+			}
+			
+			.nav li:nth-child(4) {
+				float: right;
+			}
+			
+			.nav li:nth-child(5) {
+				float: right;
+			}
+			
+			h2 {
+				color: #445660!important;
+				font-family: "microsoft yahei";
+			}
+			
+			form {
+				margin: 0 auto;
+				margin-top: 50px;
+				width: 600px;
+				background-color: white;
+				border: 1px solid gdarkgray!important;
+				padding: 5px 20px;
+			}
+		</style>
+		<link rel="stylesheet" href="/bootstrap.min.css">
+		<script src="/jquery.min.js"></script>
+		<script src="/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<ul class="nav nav-pills" role="tablist">
+			<li role="presentation">
+				<a href="#"><img src="/images/logocaise.png" /></a>
+			</li>
+			<li role="presentation">
+				<a href="#">About us</a>
+			</li>
+			<li role="presentation">
+				<a href="#">Product</a>
+			</li>
+			<li role="presentation">
+				<a href="#">Register</a>
+			</li>
+			<li role="presentation">
+				<a href="#">Login</a>
+			</li>
+		</ul>
+
+		<form role="form">
+			<h2>Login</h2>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+			<div class="checkbox">
+				<label>
+     			 <input type="checkbox"> Remember Me
+    			</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+	</body>
+
+</html>
